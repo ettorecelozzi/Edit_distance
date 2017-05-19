@@ -1,12 +1,3 @@
-# m = x.lenght
-# n = y.length
-# siano c[0,...,m 0,..n] e op[0...,m 0...n] 2 tabelle
-# for i = 0 to m
-# c[i,0] = i * cost(delete)
-# op[i,0] = Delete
-# for j = 0 to n
-# c[j,0] = j*cost(Insert)
-# op[j,0] = insert
 import numpy as np
 
 X = raw_input("Inserisci parola: ")
@@ -29,7 +20,8 @@ def editDistance(X, Y):
                 c[i, j] = c[i - 1, j - 1] + 0  # costo della copia
             if X[i - 1] != Y[j - 1] and (c[i - 1, j - 1] + 1) < c[i, j]:
                 c[i, j] = c[i - 1, j - 1] + 1  # costo replace
-            if i >= 2 and j >= 2 and X[i - 1] == Y[j - 2] and X[i - 2] == Y[j - 1] and (c[i - 2, j - 2] + 2) < c[i, j]:  # 2 costo scambio
+            # 2 costo scambio
+            if i >= 2 and j >= 2 and X[i - 1] == Y[j - 2] and X[i - 2] == Y[j - 1] and (c[i - 2, j - 2] + 2) < c[i, j]:
                 c[i, j] = c[i - 2, j - 2] + 2
             if c[i - 1, j] + 1 < c[i, j]:
                 c[i, j] = c[i - 1, j] + 1

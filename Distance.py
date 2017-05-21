@@ -1,6 +1,5 @@
 import numpy as np
 
-
 X = raw_input("Inserisci parola: ")
 Y = raw_input("Inserisci seconda parola: ")
 sh = {len(X) * len(Y)}

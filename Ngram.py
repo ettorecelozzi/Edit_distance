@@ -3,9 +3,9 @@ def bigram():  # IMPORTANTE: necessita di uno spazio alla fine della lista dei n
     linelist = l.readlines()
     bigramlist = []
     for j in range(len(linelist)):
-        for i in range(len(linelist[j]) - 2):
+        for i in range(len(linelist[j]) - 2):  # sottrazione dovuta alla lunghezza falsata dal "\n"
             bigramlist.append(linelist[j][i] + linelist[j][i + 1] + "\n")
-            if i == len(linelist):
+            if i == len(linelist):  # per copiare ultimo elemento eliminando "\n"
                 bigramlist.append(linelist[j][i + 1] + linelist[j][i + 2] + "\n")
     l.close()
     l = open("C:\\Users\\Michele\\Desktop\\bigram.txt", "w")

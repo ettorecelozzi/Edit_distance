@@ -58,5 +58,5 @@ class Ngrams:
     }
 
 
-ngram = Ngrams()
-print ngram.option[1]("margherita")
+#ngram = Ngrams()
+#print ngram.option[1]("margherita")

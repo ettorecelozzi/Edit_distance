@@ -1,8 +1,5 @@
 import numpy as np
 
-#X = raw_input("Inserisci parola: ")
-#Y = raw_input("Inserisci seconda parola: ")
-
 
 def editDistance(X, Y):
     m = len(X)
@@ -27,5 +24,3 @@ def editDistance(X, Y):
             if (c[i, j - 1] + 1) < c[i, j]:
                 c[i, j] = c[i, j - 1] + 1
     return c[len(X)][len(Y)]
-
-

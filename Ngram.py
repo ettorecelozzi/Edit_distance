@@ -22,6 +22,3 @@ class Ngrams:
         2: bigram,
         3: trigram,
     }
-
-# ngram = Ngrams()
-# print ngram.option[int('1')]("margherita")
